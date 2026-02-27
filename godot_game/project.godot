@@ -1,0 +1,16 @@
+; Engine configuration file.
+
+config_version=5
+
+[application]
+config/name="KQ Prototype Godot"
+run/main_scene="res://scenes/Main.tscn"
+
+[display]
+window/size/viewport_width=1536
+window/size/viewport_height=1024
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+
+[rendering]
+textures/canvas_textures/default_texture_filter=0

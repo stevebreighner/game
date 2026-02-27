@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quest Prototype</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="game-shell">
+        <canvas id="game" width="960" height="540" aria-label="Adventure game"></canvas>
+      </section>
+
+      <aside class="hud">
+        <h1>Kingdom Quest</h1>
+        <p class="subtitle">KQ3-style prototype</p>
+
+        <section class="panel">
+          <h2>Controls</h2>
+          <ul>
+            <li><kbd>WASD</kbd> / <kbd>Arrows</kbd> move</li>
+            <li><kbd>E</kbd> interact</li>
+            <li><kbd>I</kbd> inventory</li>
+            <li><kbd>Space</kbd> inspect area</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h2>Inventory</h2>
+          <ul id="inventory-list" class="inventory-list">
+            <li>Empty</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h2>Status</h2>
+          <p id="room-name">Room: -</p>
+          <p id="clock">Time: Day 1, 07:30</p>
+          <p id="wizard-status">Wizard: -</p>
+          <p id="danger-meter">Suspicion: Safe</p>
+          <p id="objective">Objective: Find a way into the tower.</p>
+        </section>
+      </aside>
+    </main>
+
+    <section class="message-log-wrap">
+      <h2>Message Log</h2>
+      <div id="message-log" class="message-log" aria-live="polite"></div>
+    </section>
+
+    <script src="game.js"></script>
+  </body>
+</html>

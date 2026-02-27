@@ -1,0 +1,11 @@
+.DS_Store
+*.swp
+*.swo
+
+# Godot
+.godot/
+.import/
+*.translation
+
+# Build outputs
+c_game/kq3_vga

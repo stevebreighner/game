@@ -1,0 +1,135 @@
+:root {
+  --bg: #f3ead3;
+  --panel: #e3d5b3;
+  --accent: #5f4629;
+  --ink: #241c11;
+  --canvas-frame: #7d6240;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 20% 20%, #fff7e8, var(--bg));
+  color: var(--ink);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(520px, 960px) 320px;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.game-shell {
+  border: 12px solid var(--canvas-frame);
+  border-radius: 10px;
+  background: #000;
+  box-shadow: 0 20px 45px rgba(48, 30, 11, 0.25);
+}
+
+#game {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hud {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+}
+
+.subtitle {
+  margin-top: -0.4rem;
+  opacity: 0.8;
+}
+
+.panel {
+  background: var(--panel);
+  border: 2px solid #c4b288;
+  border-radius: 8px;
+  padding: 0.8rem;
+}
+
+.panel h2 {
+  margin-bottom: 0.45rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+ul {
+  padding-left: 1.1rem;
+}
+
+kbd {
+  border: 1px solid #765d3d;
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: #f6eedf;
+  padding: 0 0.28rem;
+  font-size: 0.82rem;
+}
+
+.inventory-list {
+  list-style: square;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.message-log-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1rem 1rem;
+}
+
+.message-log-wrap h2 {
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.message-log {
+  min-height: 140px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 2px solid #baa373;
+  border-radius: 8px;
+  background: rgba(255, 247, 229, 0.75);
+  padding: 0.6rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.message-log p {
+  margin: 0;
+  font-size: 0.94rem;
+}
+
+@media (max-width: 980px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hud {
+    order: -1;
+  }
+}
